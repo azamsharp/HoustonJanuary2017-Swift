@@ -8,6 +8,7 @@ func sayHello() {
 
 func sayHello(to name :String) {
     print(name)
+    print("") 
 }
 
 func add(firstValue :Int, secondValue :Int) -> Int {
