@@ -1,191 +1,180 @@
-//: Playground - noun: a place where people can play
 
 import UIKit
 
-func sayHello() {
-    print("sayHello fired")
-}
-
-func login() {
+class Address {
     
+    var street :String?
+    var city :String?
 }
 
-func sayHello(to name :String) {
-    print(name)
-    print("")
+class User {
+    
+    var address :Address?
 }
 
-func add(firstValue :Int, secondValue :Int) -> Int {
-    return firstValue + secondValue
+let user = User()
+user.address = Address()
+user.address?.city = "Houston"
+
+
+print(user.address!)
+
+//print((user.address?.city)!)
+
+if let address = user.address {
+    if let city = address.city {
+        print(city)
+    }
 }
 
-func verifyAge(name :String, age :Int) -> Bool {
-    return true
+guard let address = user.address,
+        let city = address.city
+    else {
+    fatalError("")
 }
 
+print(address)
+print(city)
 
-var age = 10
-age = 11
 
-let name = "John"
-//name = "Mary" // cannot change the let constant
 
-sayHello()
+// optionals 
 
-sayHello(to :"John")
+let age :Int?
+age = 23
 
-// add(10,10) Swift 2.X
+let name :String?
 
-let result = add(firstValue: 10, secondValue: 20)
+name = "John"
 
-let isVerified = verifyAge(name: "John", age: 29)
-
-// collections 
-
-let numbers = [2,3,1,2,12,45,67]
-
-//numbers.append(400)
-//numbers.remove(at: 2)
-
-var names = ["Alex","John","Mary"]
-names.append("Sally")
-
-names[2]
-
-names.append("23")
-
-for name in names {
+if let name = name {
     print(name)
 }
 
-for index in 0..<10 {
-    print(index)
+guard let n = name else {
+    fatalError("name is nil")
 }
 
+// all code over here
 
-for index in 0...names.count - 1 {
-    print(index)
-}
-
-for index in 0..<names.count {
-    print(index)
-}
-
-// dictionaries 
-
-var airports = ["IAH":"Intercontinental Airport","SJO":"San Jose Airport"]
-
-airports["MX"] = "Mexico City"
-
-airports["MX"]
-
-for (key,value) in airports {
-    print(key)
-    print(value)
-}
+print(name!)
+print(age!)
 
 
-// conditions 
 
-let myAge = 20
+// availability API 
 
-if myAge < 20 {
+
+// extensions
+
+class Palindrome {
     
-} else {
-    
-}
-
-// classes 
-
-class GroceryCategory {
-    
-    var title :String // defining a property
-    var address :String
-    
-    init(title :String,address :String) {
-        self.title = title
-        self.address = address
+    func isPalindrom(string :String) -> Bool {
+        return true
     }
     
-    func showGroceryList() {
+}
+
+extension Int {
+    
+    func isPrime() -> Bool {
         
-    }
-    
-    func showItemsByStoreId(storeId :String) {
+        print(self)
         
-    }
-}
-
-let gc = GroceryCategory(title: "Walmart", address: "Richmond Ave")
-gc.showGroceryList()
-
-gc.showItemsByStoreId(storeId: "2345")
-
-
-
-//gc.title?.uppercased()
-//gc.address = "Richmond Ave"
-//print(gc.address!.uppercased())
-//gc.address?.capitalized
-//let gc = GroceryCategory(title: "Walmart", address: "Richmond Ave")
-//gc.showGroceryList()
-
-class Animal {
-    
-    func walk() {
-        
+        return true
     }
     
 }
 
-class Dog : Animal {
+extension String {
     
-    override func walk() {
-        print("Dog is walking")
+    func isPalindrom() -> Bool {
+        
+        if self == "Cat" {
+            return false
+        }
+        
+        return true
     }
+}
+
+extension UIColor {
     
-    func sleep(_ numberOfHours :Int) {
+    static func initWithHex(hexCode :String) -> UIColor {
+        
+        if hexCode == "FFFFFF" {
+            return UIColor.white
+        }
+        
+        return UIColor.green
         
     }
 }
 
-let dog = Dog()
-dog.walk()
+UIColor.initWithHex(hexCode: "FFFFFF")
 
-//dog.sleep(numberOfHours: 12)
 
-dog.sleep(10)
 
-class GroceryCategoryTableViewController : UITableViewController {
+let word = "Cat"
+word.isPalindrom()
+
+let number  = 7
+number.isPrime()
+
+
+/* 
+ 
+  UIColor+Additions.h 
+  UIColor+Additions.m
+ 
+ */
+
+// protocols
+
+// protocols extensions 
+
+protocol Flyable : class {
+    func fly()
+}
+
+extension Flyable {
     
-    @IBOutlet weak var firstNameTextField :UITextField!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func fly() {
+        print("I can fly")
     }
+}
+
+class Bird : Flyable {
+//    func fly() {
+//        print("Birds can fly")
+//    }
+}
+
+class Pelican : Bird {
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+//    override func fly() {
+//        print("Pelican can fly")
+//    }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
+}
+
+let pelican = Pelican()
+pelican.fly()
+
+
+// error handling 
+
+func add(a :Int, b:Int) throws {
     
-    @IBAction func buttonPressed() {
-        
-    }
+}
+
+do {
     
-    @IBAction func someButtonPressed(sender :Any) {
-        
-    }
+    try add(a: 2, b: 4)
+
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = UITableViewCell()
-        return cell
-    }
-    
+} catch {
+    print("error caught")
 }
 
 
@@ -196,4 +185,5 @@ class GroceryCategoryTableViewController : UITableViewController {
 
 
 
+// generics
 

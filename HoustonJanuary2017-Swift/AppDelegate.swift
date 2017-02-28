@@ -7,17 +7,83 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var managedObjectContext :NSManagedObjectContext!
+    
+    var persistentStoreContainer :NSPersistentContainer!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        self.persistentStoreContainer = NSPersistentContainer(name: "GrocryDataModel")
+        
+        self.persistentStoreContainer.loadPersistentStores { (description, error) in
+            
+            print(description)
+        }
+        
+        // pre iOS 10
+       // initializeCoreDataStack()
+        
+//        guard let addGroceryCategoryVC = self.window?.rootViewController as? AddGroceryCategoryViewController else {
+//            fatalError("No root view controller found")
+//        }
+        
+        guard let navController = self.window?.rootViewController as? UINavigationController else {
+            fatalError("RootViewController not found")
+        }
+        
+        guard let groceryCategoriesTVC = navController.viewControllers.first as? GroceryCategoriesTableViewController else {
+            fatalError("GroceryCategoriesTableViewController is not found")
+        }
+        
+//        guard let groceryCategoriesTVC = self.window?.rootViewController as? GroceryCategoriesTableViewController else {
+//            fatalError("No root view controller found")
+//        }
+//        
+        groceryCategoriesTVC.managedObjectContext = self.persistentStoreContainer.viewContext
+        
+       // addGroceryCategoryVC.managedObjectContext = self.persistentStoreContainer.viewContext
         return true
     }
+    
+    func initializeCoreDataStack() {
+        
+        guard let modelURL = Bundle.main.url(forResource: "GrocryDataModel", withExtension: "momd") else {
+            fatalError("GrocryDataModel not found")
+        }
+        
+        guard let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL) else {
+            fatalError("Unable to initialize ManagedObjectModel")
+        }
+        
+        let persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
+        
+        let fileManager = FileManager()
+        
+        guard let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            fatalError("Unable to get documents URL")
+        }
+        
+        let storeURL = documentsURL.appendingPathComponent("Grocry.sqlite")
+        
+        print(storeURL)
+        
+        try! persistentStoreCoordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: nil)
+        
+        let type = NSManagedObjectContextConcurrencyType.mainQueueConcurrencyType
+      
+        self.managedObjectContext = NSManagedObjectContext(concurrencyType: type)
+        self.managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
+        
+    }
+
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

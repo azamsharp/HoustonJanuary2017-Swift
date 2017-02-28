@@ -8,18 +8,29 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, DetailsViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func detailsViewControllerDidSave(name: String) {
+        
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        /*
+         
+             (DetailsViewController *) segue.destination
+         
+         */
+        
+        let detailsVC = segue.destination as! DetailsViewController
+        detailsVC.delegate = self
+        
+        
+    }
 
 }
 
