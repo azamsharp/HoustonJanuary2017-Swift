@@ -9,9 +9,15 @@
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="details" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="groceryItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GroceryItem" inverseName="groceryCategory" inverseEntity="GroceryItem" syncable="YES"/>
+    </entity>
+    <entity name="GroceryItem" representedClassName=".GroceryItem" syncable="YES" codeGenerationType="class">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="groceryCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GroceryCategory" inverseName="groceryItems" inverseEntity="GroceryCategory" syncable="YES"/>
     </entity>
     <elements>
-        <element name="GroceryCategory" positionX="-63" positionY="-18" width="128" height="90"/>
         <element name="Customer" positionX="-54" positionY="18" width="128" height="90"/>
+        <element name="GroceryCategory" positionX="-47" positionY="-150" width="128" height="105"/>
+        <element name="GroceryItem" positionX="243" positionY="-19" width="128" height="73"/>
     </elements>
 </model>

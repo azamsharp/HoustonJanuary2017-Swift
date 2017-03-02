@@ -50,9 +50,12 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PLb-gN-1nj" id="mk4-F8-6dv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="tlH-vI-qxF" kind="show" id="Y6g-xK-Y83"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -71,6 +74,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tha-On-rG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="175.19999999999999" y="827.13643178410803"/>
+        </scene>
+        <!--Add Grocery Item View Controller-->
+        <scene sceneID="ni7-Fq-OsT">
+            <objects>
+                <viewController id="tlH-vI-qxF" customClass="AddGroceryItemViewController" customModule="HoustonJanuary2017_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zKy-KV-2Qz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kq0-zG-Tr1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="khG-fN-ObX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdP-bZ-bzA">
+                                <rect key="frame" x="110" y="318" width="155" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add New Grocery Item">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addGroceryItemButtonPressed:" destination="tlH-vI-qxF" eventType="touchUpInside" id="eex-Ty-WAc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30413853660000001" green="0.41556146929999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cjb-qp-4nR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="833"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
