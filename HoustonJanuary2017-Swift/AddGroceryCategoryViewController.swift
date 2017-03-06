@@ -18,6 +18,8 @@ class AddGroceryCategoryViewController: UIViewController {
 
         populateGroceryCategories()
         
+        
+        
     }
     
     func populateGroceryCategories() {

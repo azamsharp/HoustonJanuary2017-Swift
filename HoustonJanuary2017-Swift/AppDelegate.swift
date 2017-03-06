@@ -20,12 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        self.persistentStoreContainer = NSPersistentContainer(name: "GrocryDataModel")
-        
-        self.persistentStoreContainer.loadPersistentStores { (description, error) in
-            
-            print(description)
-        }
+//        self.persistentStoreContainer = NSPersistentContainer(name: "GrocryDataModel")
+//        
+//        self.persistentStoreContainer.loadPersistentStores { (description, error) in
+//            
+//            print(description)
+//        }
         
         // pre iOS 10
        // initializeCoreDataStack()
@@ -33,20 +33,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        guard let addGroceryCategoryVC = self.window?.rootViewController as? AddGroceryCategoryViewController else {
 //            fatalError("No root view controller found")
 //        }
-        
-        guard let navController = self.window?.rootViewController as? UINavigationController else {
-            fatalError("RootViewController not found")
-        }
-        
-        guard let groceryCategoriesTVC = navController.viewControllers.first as? GroceryCategoriesTableViewController else {
-            fatalError("GroceryCategoriesTableViewController is not found")
-        }
+//        
+//        guard let navController = self.window?.rootViewController as? UINavigationController else {
+//            fatalError("RootViewController not found")
+//        }
+//        
+//        guard let groceryCategoriesTVC = navController.viewControllers.first as? GroceryCategoriesTableViewController else {
+//            fatalError("GroceryCategoriesTableViewController is not found")
+//        }
         
 //        guard let groceryCategoriesTVC = self.window?.rootViewController as? GroceryCategoriesTableViewController else {
 //            fatalError("No root view controller found")
 //        }
 //        
-        groceryCategoriesTVC.managedObjectContext = self.persistentStoreContainer.viewContext
+      //  groceryCategoriesTVC.managedObjectContext = self.persistentStoreContainer.viewContext
         
        // addGroceryCategoryVC.managedObjectContext = self.persistentStoreContainer.viewContext
         return true

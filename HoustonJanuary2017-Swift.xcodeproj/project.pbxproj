@@ -17,6 +17,9 @@
 		348988D81E65D1AA000C803E /* GrocryDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 348988D61E65D1AA000C803E /* GrocryDataModel.xcdatamodeld */; };
 		348988DC1E65D55A000C803E /* AddGroceryCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348988DB1E65D55A000C803E /* AddGroceryCategoryViewController.swift */; };
 		348988DE1E65E4DF000C803E /* GroceryCategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348988DD1E65E4DF000C803E /* GroceryCategoriesTableViewController.swift */; };
+		34A4FA5A1E6DAE2D001D0522 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A4FA591E6DAE2D001D0522 /* HelloViewController.swift */; };
+		34A4FA5C1E6DC26D001D0522 /* PhotosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A4FA5B1E6DC26D001D0522 /* PhotosTableViewController.swift */; };
+		34A4FA5E1E6DCCA5001D0522 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A4FA5D1E6DCCA5001D0522 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		348988D71E65D1AA000C803E /* GrocryDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GrocryDataModel.xcdatamodel; sourceTree = "<group>"; };
 		348988DB1E65D55A000C803E /* AddGroceryCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroceryCategoryViewController.swift; sourceTree = "<group>"; };
 		348988DD1E65E4DF000C803E /* GroceryCategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryCategoriesTableViewController.swift; sourceTree = "<group>"; };
+		34A4FA591E6DAE2D001D0522 /* HelloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
+		34A4FA5B1E6DC26D001D0522 /* PhotosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosTableViewController.swift; sourceTree = "<group>"; };
+		34A4FA5D1E6DCCA5001D0522 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 		34269D3D1E5F374D006B1B55 /* HoustonJanuary2017-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				34A4FA581E6DAE17001D0522 /* Week 6 */,
 				348988FD1E672FA1000C803E /* Week 5 */,
 				34269D3E1E5F374D006B1B55 /* AppDelegate.swift */,
 				34269D401E5F374D006B1B55 /* ViewController.swift */,
@@ -95,6 +102,16 @@
 				34340FBC1E68748C00E9997D /* AddGroceryItemViewController.swift */,
 			);
 			name = "Core-Data";
+			sourceTree = "<group>";
+		};
+		34A4FA581E6DAE17001D0522 /* Week 6 */ = {
+			isa = PBXGroup;
+			children = (
+				34A4FA591E6DAE2D001D0522 /* HelloViewController.swift */,
+				34A4FA5B1E6DC26D001D0522 /* PhotosTableViewController.swift */,
+				34A4FA5D1E6DCCA5001D0522 /* Photo.swift */,
+			);
+			name = "Week 6";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,9 +191,12 @@
 				348988DC1E65D55A000C803E /* AddGroceryCategoryViewController.swift in Sources */,
 				348988DE1E65E4DF000C803E /* GroceryCategoriesTableViewController.swift in Sources */,
 				34269D411E5F374D006B1B55 /* ViewController.swift in Sources */,
+				34A4FA5E1E6DCCA5001D0522 /* Photo.swift in Sources */,
 				348988D81E65D1AA000C803E /* GrocryDataModel.xcdatamodeld in Sources */,
+				34A4FA5C1E6DC26D001D0522 /* PhotosTableViewController.swift in Sources */,
 				34269D3F1E5F374D006B1B55 /* AppDelegate.swift in Sources */,
 				340166311E6485B3003CADFF /* DetailsViewController.swift in Sources */,
+				34A4FA5A1E6DAE2D001D0522 /* HelloViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
