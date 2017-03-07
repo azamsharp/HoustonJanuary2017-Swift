@@ -1,189 +1,120 @@
 
 import UIKit
+import PlaygroundSupport
 
-class Address {
+// GET 
+
+let url = URL(string: "http://localhost:8080/groceryCategory")!
+
+URLSession.shared.dataTask(with: url) { (data, _, _) in
     
-    var street :String?
-    var city :String?
-}
-
-class User {
+    print(data!)
     
-    var address :Address?
-}
-
-let user = User()
-user.address = Address()
-user.address?.city = "Houston"
-
-
-print(user.address!)
-
-//print((user.address?.city)!)
-
-if let address = user.address {
-    if let city = address.city {
-        print(city)
-    }
-}
-
-guard let address = user.address,
-        let city = address.city
-    else {
-    fatalError("")
-}
-
-print(address)
-print(city)
-
-
-
-// optionals 
-
-let age :Int?
-age = 23
-
-let name :String?
-
-name = "John"
-
-if let name = name {
-    print(name)
-}
-
-guard let n = name else {
-    fatalError("name is nil")
-}
-
-// all code over here
-
-print(name!)
-print(age!)
-
-
-
-// availability API 
-
-
-// extensions
-
-class Palindrome {
+    let json = try! JSONSerialization.jsonObject(with: data!, options: [])
     
-    func isPalindrom(string :String) -> Bool {
-        return true
-    }
+    print(json)
     
-}
-
-extension Int {
-    
-    func isPrime() -> Bool {
-        
-        print(self)
-        
-        return true
-    }
-    
-}
-
-extension String {
-    
-    func isPalindrom() -> Bool {
-        
-        if self == "Cat" {
-            return false
-        }
-        
-        return true
-    }
-}
-
-extension UIColor {
-    
-    static func initWithHex(hexCode :String) -> UIColor {
-        
-        if hexCode == "FFFFFF" {
-            return UIColor.white
-        }
-        
-        return UIColor.green
-        
-    }
-}
-
-UIColor.initWithHex(hexCode: "FFFFFF")
+}.resume()
 
 
+// POST 
 
-let word = "Cat"
-word.isPalindrom()
+//let url = URL(string: "http://jsonplaceholder.typicode.com/posts")!
+//
+//var request = URLRequest(url: url)
+//request.httpMethod = "POST"
+//request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+//
+//let postBody :[String:Any] = ["title":"Hello World","body":"This is body","userId":1234]
+//
+//let postData = try! JSONSerialization.data(withJSONObject: postBody, options: [])
+//
+//request.httpBody = postData
+//
+//URLSession.shared.dataTask(with: request) { (data, _, _) in
+//    
+//    let json = try! JSONSerialization.jsonObject(with: data!, options: [])
+//
+//    print(json)
+//    
+//}.resume()
 
-let number  = 7
-number.isPrime()
+//{
+//    
+//    "title": "foo",
+//    "body": "bar",
+//    "userId": 1
+//}
 
 
-/* 
- 
-  UIColor+Additions.h 
-  UIColor+Additions.m
- 
- */
-
-// protocols
-
-// protocols extensions 
-
-protocol Flyable : class {
-    func fly()
-}
-
-extension Flyable {
-    
-    func fly() {
-        print("I can fly")
-    }
-}
-
-class Bird : Flyable {
-//    func fly() {
-//        print("Birds can fly")
+//let numbers = [2,3,4,12,5,67]
+//
+//numbers.map { number in
+//    return number * 2
+//}
+//
+//numbers.filter { number in
+//    return number % 2 == 0
+//}
+//
+//var numbersMultipliedBy2 = [Int]()
+//
+//for number in numbers {
+//    
+//     numbersMultipliedBy2.append(number * 2)
+//}
+//
+//numbersMultipliedBy2
+//
+//let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
+//
+//class Post {
+//    
+//    var title :String!
+//    var body :String!
+//    
+//    init(dictionary :[String:Any]) {
+//        self.title = dictionary["title"] as! String
+//        self.body = dictionary["body"] as! String
 //    }
-}
-
-class Pelican : Bird {
-    
-//    override func fly() {
-//        print("Pelican can fly")
+//}
+//
+//URLSession.shared.dataTask(with: url) { (data, reponse, error) in
+//    
+//    let json = try! JSONSerialization.jsonObject(with: data!, options: [])
+//    
+//    let arrayOfDictionaries = json as! [[String:Any]]
+//    
+//    //arrayOfDictionaries.map(Post.init)
+//    
+//    for dictionary in arrayOfDictionaries {
+//        
+//        let post = Post(dictionary: dictionary)
+//        print(post.title)
+//    
 //    }
-    
-}
-
-let pelican = Pelican()
-pelican.fly()
-
-
-// error handling 
-
-func add(a :Int, b:Int) throws {
-    
-}
-
-do {
-    
-    try add(a: 2, b: 4)
-
-    
-} catch {
-    print("error caught")
-}
-
-
+//    
+//    
+////    print(data!)
+////    
+////    let  json = try! JSONSerialization.jsonObject(with: data!, options: [])
+////    let usersArray = json as! [[String:Any]]
+////    
+////    let firstUser = usersArray[0]
+////    
+////    let firstUserName = firstUser["name"]
+////    
+////    let address = firstUser["address"] as! [String: Any]
+////    
+////    let street = address["street"] as! String
+////    let city = address["city"] as! String
+////    let geo = address["geo"] as! [String :Any]
+////    let lat = geo["lat"] as! String
+////    
+////    print(street)
+//    
+//}.resume()
 
 
-
-
-
-
-
-// generics
+PlaygroundPage.current.needsIndefiniteExecution = true
 
