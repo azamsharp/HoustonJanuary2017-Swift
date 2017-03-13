@@ -2,119 +2,85 @@
 import UIKit
 import PlaygroundSupport
 
-// GET 
+class Movie {
+    var title :String!
+    var posterURL :String!
+}
 
-let url = URL(string: "http://localhost:8080/groceryCategory")!
-
-URLSession.shared.dataTask(with: url) { (data, _, _) in
+class MoviesTableViewController : UITableViewController {
     
-    print(data!)
+    var movies = [Movie]()
     
-    let json = try! JSONSerialization.jsonObject(with: data!, options: [])
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        populateMovies()
+    }
     
-    print(json)
+    private func populateMovies() {
+        
+        let url = URL(string: "http://www.omdbapi.com/?s=Superman&page=2")!
+        
+        URLSession.shared.dataTask(with: url) { (data, _, _) in
+            
+            let rootDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String:Any]
+            
+            let moviesArrayOfDictionary = rootDictionary["Search"] as! [[String:Any]]
+            
+            for movieDictionary in moviesArrayOfDictionary {
+                
+                let movie = Movie()
+                movie.title = movieDictionary["Title"] as! String
+                movie.posterURL = movieDictionary["Poster"] as! String
+                
+                self.movies.append(movie)
+            }
+            
+           // DispatchQueue.main.async {
+                self.tableView.reloadData()
+           // }
+            
+        }.resume()
+        
+        
+    }
     
-}.resume()
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.movies.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
+        
+        let movie = self.movies[indexPath.row]
+        
+      //  DispatchQueue.global().async {
+            
+            let posterData = NSData(contentsOf: URL(string: movie.posterURL)!)
+            
+       //     DispatchQueue.main.async {
+                
+                cell.imageView?.image = UIImage(data: posterData as! Data)
+       //     }
+            
+       // }
+        
+        cell.textLabel?.text = movie.title
+        return cell
+    }
+    
+    
+}
 
 
-// POST 
+let moviesTVC = MoviesTableViewController()
+moviesTVC.view.frame = CGRect(x: 0, y: 0, width: 320, height: 480)
 
-//let url = URL(string: "http://jsonplaceholder.typicode.com/posts")!
-//
-//var request = URLRequest(url: url)
-//request.httpMethod = "POST"
-//request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//
-//let postBody :[String:Any] = ["title":"Hello World","body":"This is body","userId":1234]
-//
-//let postData = try! JSONSerialization.data(withJSONObject: postBody, options: [])
-//
-//request.httpBody = postData
-//
-//URLSession.shared.dataTask(with: request) { (data, _, _) in
-//    
-//    let json = try! JSONSerialization.jsonObject(with: data!, options: [])
-//
-//    print(json)
-//    
-//}.resume()
-
-//{
-//    
-//    "title": "foo",
-//    "body": "bar",
-//    "userId": 1
-//}
-
-
-//let numbers = [2,3,4,12,5,67]
-//
-//numbers.map { number in
-//    return number * 2
-//}
-//
-//numbers.filter { number in
-//    return number % 2 == 0
-//}
-//
-//var numbersMultipliedBy2 = [Int]()
-//
-//for number in numbers {
-//    
-//     numbersMultipliedBy2.append(number * 2)
-//}
-//
-//numbersMultipliedBy2
-//
-//let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
-//
-//class Post {
-//    
-//    var title :String!
-//    var body :String!
-//    
-//    init(dictionary :[String:Any]) {
-//        self.title = dictionary["title"] as! String
-//        self.body = dictionary["body"] as! String
-//    }
-//}
-//
-//URLSession.shared.dataTask(with: url) { (data, reponse, error) in
-//    
-//    let json = try! JSONSerialization.jsonObject(with: data!, options: [])
-//    
-//    let arrayOfDictionaries = json as! [[String:Any]]
-//    
-//    //arrayOfDictionaries.map(Post.init)
-//    
-//    for dictionary in arrayOfDictionaries {
-//        
-//        let post = Post(dictionary: dictionary)
-//        print(post.title)
-//    
-//    }
-//    
-//    
-////    print(data!)
-////    
-////    let  json = try! JSONSerialization.jsonObject(with: data!, options: [])
-////    let usersArray = json as! [[String:Any]]
-////    
-////    let firstUser = usersArray[0]
-////    
-////    let firstUserName = firstUser["name"]
-////    
-////    let address = firstUser["address"] as! [String: Any]
-////    
-////    let street = address["street"] as! String
-////    let city = address["city"] as! String
-////    let geo = address["geo"] as! [String :Any]
-////    let lat = geo["lat"] as! String
-////    
-////    print(street)
-//    
-//}.resume()
-
-
+PlaygroundPage.current.liveView = moviesTVC
 PlaygroundPage.current.needsIndefiniteExecution = true
 

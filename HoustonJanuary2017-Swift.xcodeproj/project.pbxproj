@@ -14,6 +14,8 @@
 		34269D461E5F374D006B1B55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34269D451E5F374D006B1B55 /* Assets.xcassets */; };
 		34269D491E5F374D006B1B55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34269D471E5F374D006B1B55 /* LaunchScreen.storyboard */; };
 		34340FBD1E68748C00E9997D /* AddGroceryItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34340FBC1E68748C00E9997D /* AddGroceryItemViewController.swift */; };
+		343849421E76E74C00D8B57E /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343849411E76E74C00D8B57E /* MapsViewController.swift */; };
+		343849441E76F49800D8B57E /* car.gif in Resources */ = {isa = PBXBuildFile; fileRef = 343849431E76F49800D8B57E /* car.gif */; };
 		348988D81E65D1AA000C803E /* GrocryDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 348988D61E65D1AA000C803E /* GrocryDataModel.xcdatamodeld */; };
 		348988DC1E65D55A000C803E /* AddGroceryCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348988DB1E65D55A000C803E /* AddGroceryCategoryViewController.swift */; };
 		348988DE1E65E4DF000C803E /* GroceryCategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348988DD1E65E4DF000C803E /* GroceryCategoriesTableViewController.swift */; };
@@ -33,6 +35,8 @@
 		34269D4A1E5F374D006B1B55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34269D511E5F38E7006B1B55 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		34340FBC1E68748C00E9997D /* AddGroceryItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroceryItemViewController.swift; sourceTree = "<group>"; };
+		343849411E76E74C00D8B57E /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		343849431E76F49800D8B57E /* car.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = car.gif; sourceTree = "<group>"; };
 		348988D71E65D1AA000C803E /* GrocryDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GrocryDataModel.xcdatamodel; sourceTree = "<group>"; };
 		348988DB1E65D55A000C803E /* AddGroceryCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroceryCategoryViewController.swift; sourceTree = "<group>"; };
 		348988DD1E65E4DF000C803E /* GroceryCategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryCategoriesTableViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 		34269D3D1E5F374D006B1B55 /* HoustonJanuary2017-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				3438493E1E761FC600D8B57E /* Week 7 */,
 				34A4FA581E6DAE17001D0522 /* Week 6 */,
 				348988FD1E672FA1000C803E /* Week 5 */,
 				34269D3E1E5F374D006B1B55 /* AppDelegate.swift */,
@@ -79,10 +84,19 @@
 				34269D451E5F374D006B1B55 /* Assets.xcassets */,
 				34269D471E5F374D006B1B55 /* LaunchScreen.storyboard */,
 				34269D4A1E5F374D006B1B55 /* Info.plist */,
+				343849431E76F49800D8B57E /* car.gif */,
 				34269D511E5F38E7006B1B55 /* MyPlayground.playground */,
 				340166301E6485B3003CADFF /* DetailsViewController.swift */,
 			);
 			path = "HoustonJanuary2017-Swift";
+			sourceTree = "<group>";
+		};
+		3438493E1E761FC600D8B57E /* Week 7 */ = {
+			isa = PBXGroup;
+			children = (
+				343849411E76E74C00D8B57E /* MapsViewController.swift */,
+			);
+			name = "Week 7";
 			sourceTree = "<group>";
 		};
 		348988FD1E672FA1000C803E /* Week 5 */ = {
@@ -175,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34269D491E5F374D006B1B55 /* LaunchScreen.storyboard in Resources */,
+				343849441E76F49800D8B57E /* car.gif in Resources */,
 				34269D461E5F374D006B1B55 /* Assets.xcassets in Resources */,
 				34269D441E5F374D006B1B55 /* Main.storyboard in Resources */,
 			);
@@ -197,6 +212,7 @@
 				34269D3F1E5F374D006B1B55 /* AppDelegate.swift in Sources */,
 				340166311E6485B3003CADFF /* DetailsViewController.swift in Sources */,
 				34A4FA5A1E6DAE2D001D0522 /* HelloViewController.swift in Sources */,
+				343849421E76E74C00D8B57E /* MapsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
