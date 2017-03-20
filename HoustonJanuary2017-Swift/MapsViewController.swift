@@ -58,6 +58,13 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     
     @IBAction func addAnnotationButtonPressed() {
         
+//        let geoCoder = CLGeocoder()
+//        geoCoder.geocodeAddressString("1200 Richmond Ave, Houston TX 77042") { (placemark :[CLPlacemark]?, error: Error?) in
+//            
+//            
+//            
+//        }
+//        
         let request = MKLocalSearchRequest()
         request.naturalLanguageQuery = "Restuarant"
         

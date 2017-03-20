@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="83T-gY-M5f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JqY-4C-ElA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -210,6 +211,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s4f-Fq-irP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1383.2" y="2134.1829085457275"/>
+        </scene>
+        <!--Camera Demo View Controller-->
+        <scene sceneID="Gd5-px-hJg">
+            <objects>
+                <viewController id="JqY-4C-ElA" customClass="CameraDemoViewController" customModule="HoustonJanuary2017_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vur-pj-T8G"/>
+                        <viewControllerLayoutGuide type="bottom" id="U3q-YR-nJI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SFb-FM-1lr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tG1-S2-TwG">
+                                <rect key="frame" x="133" y="318" width="108" height="30"/>
+                                <state key="normal" title="Launch Camera"/>
+                                <connections>
+                                    <action selector="openCameraButtonPressed" destination="JqY-4C-ElA" eventType="touchUpInside" id="9lS-jd-LcB"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="38D-ll-OrV">
+                                <rect key="frame" x="16" y="28" width="343" height="241"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="241" id="zQd-Wg-HNp"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqV-Ot-5aq">
+                                <rect key="frame" x="16" y="424" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sepia"/>
+                                <connections>
+                                    <action selector="applySepiaTone" destination="JqY-4C-ElA" eventType="touchUpInside" id="er4-YI-xWp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4C-6D-7W4">
+                                <rect key="frame" x="70" y="424" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Mono"/>
+                                <connections>
+                                    <action selector="applyMonochromeTome" destination="JqY-4C-ElA" eventType="touchUpInside" id="p7Y-I2-zAA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tG1-S2-TwG" firstAttribute="top" secondItem="38D-ll-OrV" secondAttribute="bottom" constant="49" id="OF9-h9-Z97"/>
+                            <constraint firstItem="38D-ll-OrV" firstAttribute="centerX" secondItem="tG1-S2-TwG" secondAttribute="centerX" id="OaI-1f-oM9"/>
+                            <constraint firstItem="38D-ll-OrV" firstAttribute="trailing" secondItem="SFb-FM-1lr" secondAttribute="trailingMargin" id="XCx-Yr-aLp"/>
+                            <constraint firstItem="38D-ll-OrV" firstAttribute="top" secondItem="Vur-pj-T8G" secondAttribute="bottom" constant="8" symbolic="YES" id="hGR-cC-R3V"/>
+                            <constraint firstItem="38D-ll-OrV" firstAttribute="leading" secondItem="SFb-FM-1lr" secondAttribute="leadingMargin" id="yXL-6Y-nE8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="38D-ll-OrV" id="Uf4-hE-8CA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mu1-5G-skd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-308" y="2597.4512743628188"/>
         </scene>
         <!--Hello View Controller-->
         <scene sceneID="1BM-a6-rzQ">
