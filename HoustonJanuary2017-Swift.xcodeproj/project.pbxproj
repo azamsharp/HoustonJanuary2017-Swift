@@ -41,6 +41,7 @@
 		348988D71E65D1AA000C803E /* GrocryDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GrocryDataModel.xcdatamodel; sourceTree = "<group>"; };
 		348988DB1E65D55A000C803E /* AddGroceryCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroceryCategoryViewController.swift; sourceTree = "<group>"; };
 		348988DD1E65E4DF000C803E /* GroceryCategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryCategoriesTableViewController.swift; sourceTree = "<group>"; };
+		349B88E21E8171B1000630CE /* CoreGraphicsPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CoreGraphicsPlayground.playground; sourceTree = "<group>"; };
 		34A4FA591E6DAE2D001D0522 /* HelloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
 		34A4FA5B1E6DC26D001D0522 /* PhotosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosTableViewController.swift; sourceTree = "<group>"; };
 		34A4FA5D1E6DCCA5001D0522 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				34DE1D931E80285500DD0A13 /* CameraDemoViewController.swift */,
+				349B88E21E8171B1000630CE /* CoreGraphicsPlayground.playground */,
 			);
 			name = "Week 8";
 			sourceTree = "<group>";
