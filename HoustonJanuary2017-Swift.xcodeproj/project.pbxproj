@@ -19,6 +19,10 @@
 		348988D81E65D1AA000C803E /* GrocryDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 348988D61E65D1AA000C803E /* GrocryDataModel.xcdatamodeld */; };
 		348988DC1E65D55A000C803E /* AddGroceryCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348988DB1E65D55A000C803E /* AddGroceryCategoryViewController.swift */; };
 		348988DE1E65E4DF000C803E /* GroceryCategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348988DD1E65E4DF000C803E /* GroceryCategoriesTableViewController.swift */; };
+		3491FF5B1E82061A00089DC7 /* CoreMotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3491FF5A1E82061A00089DC7 /* CoreMotionViewController.swift */; };
+		3491FF5D1E82072B00089DC7 /* TheIronYardLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3491FF5C1E82072B00089DC7 /* TheIronYardLogo.jpg */; };
+		3491FF5F1E82CA8500089DC7 /* PinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3491FF5E1E82CA8400089DC7 /* PinkViewController.swift */; };
+		3491FF611E82CC5600089DC7 /* BoardGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3491FF601E82CC5600089DC7 /* BoardGameViewController.swift */; };
 		34A4FA5A1E6DAE2D001D0522 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A4FA591E6DAE2D001D0522 /* HelloViewController.swift */; };
 		34A4FA5C1E6DC26D001D0522 /* PhotosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A4FA5B1E6DC26D001D0522 /* PhotosTableViewController.swift */; };
 		34A4FA5E1E6DCCA5001D0522 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A4FA5D1E6DCCA5001D0522 /* Photo.swift */; };
@@ -41,6 +45,10 @@
 		348988D71E65D1AA000C803E /* GrocryDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GrocryDataModel.xcdatamodel; sourceTree = "<group>"; };
 		348988DB1E65D55A000C803E /* AddGroceryCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroceryCategoryViewController.swift; sourceTree = "<group>"; };
 		348988DD1E65E4DF000C803E /* GroceryCategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryCategoriesTableViewController.swift; sourceTree = "<group>"; };
+		3491FF5A1E82061A00089DC7 /* CoreMotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreMotionViewController.swift; sourceTree = "<group>"; };
+		3491FF5C1E82072B00089DC7 /* TheIronYardLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TheIronYardLogo.jpg; sourceTree = "<group>"; };
+		3491FF5E1E82CA8400089DC7 /* PinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinkViewController.swift; sourceTree = "<group>"; };
+		3491FF601E82CC5600089DC7 /* BoardGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardGameViewController.swift; sourceTree = "<group>"; };
 		349B88E21E8171B1000630CE /* CoreGraphicsPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CoreGraphicsPlayground.playground; sourceTree = "<group>"; };
 		34A4FA591E6DAE2D001D0522 /* HelloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
 		34A4FA5B1E6DC26D001D0522 /* PhotosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosTableViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +145,10 @@
 			children = (
 				34DE1D931E80285500DD0A13 /* CameraDemoViewController.swift */,
 				349B88E21E8171B1000630CE /* CoreGraphicsPlayground.playground */,
+				3491FF5A1E82061A00089DC7 /* CoreMotionViewController.swift */,
+				3491FF5C1E82072B00089DC7 /* TheIronYardLogo.jpg */,
+				3491FF5E1E82CA8400089DC7 /* PinkViewController.swift */,
+				3491FF601E82CC5600089DC7 /* BoardGameViewController.swift */,
 			);
 			name = "Week 8";
 			sourceTree = "<group>";
@@ -202,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34269D491E5F374D006B1B55 /* LaunchScreen.storyboard in Resources */,
+				3491FF5D1E82072B00089DC7 /* TheIronYardLogo.jpg in Resources */,
 				343849441E76F49800D8B57E /* car.gif in Resources */,
 				34269D461E5F374D006B1B55 /* Assets.xcassets in Resources */,
 				34269D441E5F374D006B1B55 /* Main.storyboard in Resources */,
@@ -219,12 +232,15 @@
 				348988DC1E65D55A000C803E /* AddGroceryCategoryViewController.swift in Sources */,
 				348988DE1E65E4DF000C803E /* GroceryCategoriesTableViewController.swift in Sources */,
 				34269D411E5F374D006B1B55 /* ViewController.swift in Sources */,
+				3491FF5F1E82CA8500089DC7 /* PinkViewController.swift in Sources */,
 				34A4FA5E1E6DCCA5001D0522 /* Photo.swift in Sources */,
 				34DE1D941E80285500DD0A13 /* CameraDemoViewController.swift in Sources */,
 				348988D81E65D1AA000C803E /* GrocryDataModel.xcdatamodeld in Sources */,
 				34A4FA5C1E6DC26D001D0522 /* PhotosTableViewController.swift in Sources */,
 				34269D3F1E5F374D006B1B55 /* AppDelegate.swift in Sources */,
 				340166311E6485B3003CADFF /* DetailsViewController.swift in Sources */,
+				3491FF5B1E82061A00089DC7 /* CoreMotionViewController.swift in Sources */,
+				3491FF611E82CC5600089DC7 /* BoardGameViewController.swift in Sources */,
 				34A4FA5A1E6DAE2D001D0522 /* HelloViewController.swift in Sources */,
 				343849421E76E74C00D8B57E /* MapsViewController.swift in Sources */,
 			);
