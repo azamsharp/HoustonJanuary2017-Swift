@@ -16,6 +16,10 @@
 		34340FBD1E68748C00E9997D /* AddGroceryItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34340FBC1E68748C00E9997D /* AddGroceryItemViewController.swift */; };
 		343849421E76E74C00D8B57E /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343849411E76E74C00D8B57E /* MapsViewController.swift */; };
 		343849441E76F49800D8B57E /* car.gif in Resources */ = {isa = PBXBuildFile; fileRef = 343849431E76F49800D8B57E /* car.gif */; };
+		344B43011E84157D00593922 /* PedemeterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B43001E84157D00593922 /* PedemeterViewController.swift */; };
+		344B43031E841D0000593922 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B43021E841D0000593922 /* FirstViewController.swift */; };
+		344B43051E841D0B00593922 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B43041E841D0B00593922 /* SecondViewController.swift */; };
+		344B43071E841E3500593922 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B43061E841E3500593922 /* FadeTransition.swift */; };
 		348988D81E65D1AA000C803E /* GrocryDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 348988D61E65D1AA000C803E /* GrocryDataModel.xcdatamodeld */; };
 		348988DC1E65D55A000C803E /* AddGroceryCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348988DB1E65D55A000C803E /* AddGroceryCategoryViewController.swift */; };
 		348988DE1E65E4DF000C803E /* GroceryCategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348988DD1E65E4DF000C803E /* GroceryCategoriesTableViewController.swift */; };
@@ -42,6 +46,10 @@
 		34340FBC1E68748C00E9997D /* AddGroceryItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroceryItemViewController.swift; sourceTree = "<group>"; };
 		343849411E76E74C00D8B57E /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		343849431E76F49800D8B57E /* car.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = car.gif; sourceTree = "<group>"; };
+		344B43001E84157D00593922 /* PedemeterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedemeterViewController.swift; sourceTree = "<group>"; };
+		344B43021E841D0000593922 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		344B43041E841D0B00593922 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		344B43061E841E3500593922 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 		348988D71E65D1AA000C803E /* GrocryDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GrocryDataModel.xcdatamodel; sourceTree = "<group>"; };
 		348988DB1E65D55A000C803E /* AddGroceryCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroceryCategoryViewController.swift; sourceTree = "<group>"; };
 		348988DD1E65E4DF000C803E /* GroceryCategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryCategoriesTableViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +119,24 @@
 			name = "Week 7";
 			sourceTree = "<group>";
 		};
+		344B42FE1E84138200593922 /* PedometerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				344B43001E84157D00593922 /* PedemeterViewController.swift */,
+			);
+			name = PedometerDemo;
+			sourceTree = "<group>";
+		};
+		344B42FF1E84138B00593922 /* ControllerTransitions */ = {
+			isa = PBXGroup;
+			children = (
+				344B43021E841D0000593922 /* FirstViewController.swift */,
+				344B43041E841D0B00593922 /* SecondViewController.swift */,
+				344B43061E841E3500593922 /* FadeTransition.swift */,
+			);
+			name = ControllerTransitions;
+			sourceTree = "<group>";
+		};
 		348988FD1E672FA1000C803E /* Week 5 */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +169,8 @@
 		34DE1D901E80257E00DD0A13 /* Week 8 */ = {
 			isa = PBXGroup;
 			children = (
+				344B42FF1E84138B00593922 /* ControllerTransitions */,
+				344B42FE1E84138200593922 /* PedometerDemo */,
 				34DE1D931E80285500DD0A13 /* CameraDemoViewController.swift */,
 				349B88E21E8171B1000630CE /* CoreGraphicsPlayground.playground */,
 				3491FF5A1E82061A00089DC7 /* CoreMotionViewController.swift */,
@@ -230,14 +258,18 @@
 			files = (
 				34340FBD1E68748C00E9997D /* AddGroceryItemViewController.swift in Sources */,
 				348988DC1E65D55A000C803E /* AddGroceryCategoryViewController.swift in Sources */,
+				344B43011E84157D00593922 /* PedemeterViewController.swift in Sources */,
 				348988DE1E65E4DF000C803E /* GroceryCategoriesTableViewController.swift in Sources */,
 				34269D411E5F374D006B1B55 /* ViewController.swift in Sources */,
 				3491FF5F1E82CA8500089DC7 /* PinkViewController.swift in Sources */,
 				34A4FA5E1E6DCCA5001D0522 /* Photo.swift in Sources */,
 				34DE1D941E80285500DD0A13 /* CameraDemoViewController.swift in Sources */,
 				348988D81E65D1AA000C803E /* GrocryDataModel.xcdatamodeld in Sources */,
+				344B43031E841D0000593922 /* FirstViewController.swift in Sources */,
 				34A4FA5C1E6DC26D001D0522 /* PhotosTableViewController.swift in Sources */,
+				344B43071E841E3500593922 /* FadeTransition.swift in Sources */,
 				34269D3F1E5F374D006B1B55 /* AppDelegate.swift in Sources */,
+				344B43051E841D0B00593922 /* SecondViewController.swift in Sources */,
 				340166311E6485B3003CADFF /* DetailsViewController.swift in Sources */,
 				3491FF5B1E82061A00089DC7 /* CoreMotionViewController.swift in Sources */,
 				3491FF611E82CC5600089DC7 /* BoardGameViewController.swift in Sources */,

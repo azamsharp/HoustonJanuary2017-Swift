@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dPL-aC-UnT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LQ7-T3-VMc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -51,7 +51,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PLb-gN-1nj" id="mk4-F8-6dv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -332,10 +332,10 @@
             </objects>
             <point key="canvasLocation" x="2103.1999999999998" y="3436.7316341829087"/>
         </scene>
-        <!--Board Game View Controller-->
+        <!--Pedemeter View Controller-->
         <scene sceneID="ApL-Jz-Leu">
             <objects>
-                <viewController id="dPL-aC-UnT" customClass="BoardGameViewController" customModule="HoustonJanuary2017_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dPL-aC-UnT" customClass="PedemeterViewController" customModule="HoustonJanuary2017_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XEc-Ga-cM2"/>
                         <viewControllerLayoutGuide type="bottom" id="GWB-rg-PqL"/>
@@ -348,7 +348,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJM-ab-KtH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3534" y="2644"/>
+            <point key="canvasLocation" x="3412" y="2643"/>
         </scene>
         <!--Pink View Controller-->
         <scene sceneID="8pE-6r-D9N">
@@ -420,7 +420,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EQd-Ot-N22" id="rvS-gq-l0g">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -452,6 +452,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jyT-k0-fyw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2322.4000000000001" y="2134.1829085457275"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="5ev-4k-YDV">
+            <objects>
+                <viewController id="LQ7-T3-VMc" customClass="FirstViewController" customModule="HoustonJanuary2017_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A8Y-61-VyC"/>
+                        <viewControllerLayoutGuide type="bottom" id="TX7-NI-upv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="US8-c6-mK1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWT-Jq-3X4">
+                                <rect key="frame" x="164" y="358" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="AGL-ed-csN" kind="show" id="l5z-2Q-65i"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87450980389999999" green="0.1672742056" blue="0.80660730089999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uML-8j-0Gr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3606" y="3964"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="AGo-cu-lOZ">
+            <objects>
+                <viewController id="AGL-ed-csN" customClass="SecondViewController" customModule="HoustonJanuary2017_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BhV-hw-3FR"/>
+                        <viewControllerLayoutGuide type="bottom" id="IjP-yu-0Ew"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n2e-Sb-cch">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.2141360038827258" green="1" blue="0.16585877540766558" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oyx-p2-VTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2713" y="3968"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="u0p-19-ugF">
